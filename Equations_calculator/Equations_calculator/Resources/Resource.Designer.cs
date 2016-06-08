@@ -61,7 +61,7 @@ namespace Equations_calculator
 		{
 			
 			// aapt resource value: 0x7f050009
-			public const int button1 = 2131034121;
+			public const int MyButton = 2131034121;
 			
 			// aapt resource value: 0x7f050001
 			public const int editText1 = 2131034113;
