@@ -6,10 +6,12 @@
     <TextView
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:layout_width="match_parent"
-        android:layout_height="75.0dp"
+        android:layout_height="103.0dp"
         android:id="@+id/textView1"
         android:layout_marginBottom="64.5dp"
-        android:text="The solution of the quadratic equation of the form ах2+bх+с=0 " />
+        android:text="The solution of the quadratic equation of the form ах2+bх+с=0 "
+        android:background="@android:color/holo_blue_light"
+        android:textColor="@android:color/black" />
     <EditText
         android:layout_width="match_parent"
         android:layout_height="0.0dp"
@@ -19,7 +21,9 @@
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/textView2" />
+        android:id="@+id/textView2"
+        android:background="@android:color/darker_gray"
+        android:textColor="@android:color/black" />
     <TextView
         android:text="a="
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -29,7 +33,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText2" />
+        android:id="@+id/editText2"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/background_dark" />
     <TextView
         android:text="b="
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -39,7 +45,9 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText3" />
+        android:id="@+id/editText3"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/black" />
     <TextView
         android:text="c="
         android:textAppearance="?android:attr/textAppearanceSmall"
@@ -49,10 +57,21 @@
     <EditText
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/editText4" />
+        android:id="@+id/editText4"
+        android:background="@android:color/background_light"
+        android:textColor="@android:color/black" />
     <Button
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/MyButton"
-        android:text="discriminant count" />
+        android:text="discriminant count"
+        android:background="@android:color/holo_red_light"
+        android:textColor="@android:color/black" />
+    <TextView
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:layout_width="match_parent"
+        android:layout_height="50.0dp"
+        android:id="@+id/textView6"
+        android:background="@android:color/holo_orange_light"
+        android:textColor="@android:color/black" />
 </LinearLayout>

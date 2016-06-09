@@ -90,6 +90,9 @@ namespace Equations_calculator
 			// aapt resource value: 0x7f050007
 			public const int textView5 = 2131034119;
 			
+			// aapt resource value: 0x7f05000a
+			public const int textView6 = 2131034122;
+			
 			static Id()
 			{
 				global::Android.Runtime.ResourceIdManager.UpdateIdValues();
