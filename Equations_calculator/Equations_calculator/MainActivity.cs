@@ -24,11 +24,12 @@ namespace Equations_calculator
 
             button.Click += delegate
             {
-                var a = (Convert.ToDouble(ed_a.Text));
-                var b = (Convert.ToDouble(ed_b.Text));
-                var c = (Convert.ToDouble(ed_c.Text));
+                double aArg,bArg,cArg;
+                var a = (Double.TryParse(ed_a.Text,out aArg));
+                var b = (Double.TryParse(ed_a.Text,out bArg));
+                var c = (Double.TryParse(ed_a.Text,out cArg));
 
-                button.Text = Diskriminant(a,b,c);
+                button.Text = Diskriminant(aArg, bArg, cArg);
             };
         }
 
