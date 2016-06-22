@@ -5,48 +5,65 @@ using Android.Runtime;
 using Android.Views;
 using Android.Widget;
 using Android.OS;
+using static Android.App.ActionBar;
 
 namespace Equations_calculator
 {
     [Activity(Label = "Equations_calculator", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
-        protected override void OnCreate (Bundle bundle)
+        protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
+            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+            Tab tab = ActionBar.NewTab();
+            tab.SetIcon(Resource.Drawable.Icon);
+            tab.TabSelected += (sender, args) =>
+            {
+                
+            };
+                ActionBar.AddTab(tab);
+
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            EditText ed_a = FindViewById<EditText>(Resource.Id.editText2);
-            EditText ed_b = FindViewById<EditText>(Resource.Id.editText3);
-            EditText ed_c = FindViewById<EditText>(Resource.Id.editText4);           
+            Spinner sp_a = FindViewById<Spinner>(Resource.Id.spinner1);
+            Spinner sp_b = FindViewById<Spinner>(Resource.Id.spinner2);
+            Spinner sp_c = FindViewById<Spinner>(Resource.Id.spinner3);
 
             button.Click += delegate
             {
-                double aArg,bArg,cArg;
-                var a = (Double.TryParse(ed_a.Text,out aArg));
-                var b = (Double.TryParse(ed_a.Text,out bArg));
-                var c = (Double.TryParse(ed_a.Text,out cArg));
+                double aArg, bArg, cArg;
+
+                var a = (Double.TryParse(sp_a.SelectedItem, out aArg));
+                var b = (Double.TryParse(sp_b.SelectedItem, out bArg));
+                var c = (Double.TryParse(sp_c.SelectedItem, out cArg));
 
                 button.Text = Diskriminant(aArg, bArg, cArg);
             };
         }
 
-        private string Diskriminant (double a, double b, double c)
+        public string Diskriminant(double a, double b, double c)
         {
             var tmpResult = b * b - 4 * a * c;
             if (tmpResult > 0)
             {
-                return "The equation has two radicals";
+                //double X1 = (-b + Math.Sqrt(tmpResult)) / (2 * a);
+                //double X2 = (-b - Math.Sqrt(tmpResult)) / (2 * a);
+
+                return "D>0 - The equation has two radicals";
             }
             else if (tmpResult == 0)
             {
-                return "The equation has two equal radicals";
+                //double X1= (-b) / (2 * a);
+                //double X2= (-b) / (2 * a);
+
+                return "D=0 - The equation has two equal radicals";
             }
-            else if (tmpResult <0)
+            else if (tmpResult < 0)
             {
-                return "The equation hasn't real radicals";
+                return "D<0 - The equation hasn't real radicals";
             }
             else
             {
