@@ -17,37 +17,40 @@ namespace Equations_calculator
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
+            Button button = FindViewById<Button>(Resource.Id.MyButton);
+
             ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
             Tab tab = ActionBar.NewTab();
             tab.SetIcon(Resource.Drawable.Icon);
             tab.TabSelected += (sender, args) =>
             {
-                
+                 
             };
                 ActionBar.AddTab(tab);
 
-            Button button = FindViewById<Button>(Resource.Id.MyButton);
+           
 
             //Spinner spinner = FindViewById<Spinner>(Resource.Id.spinner);
 
             Spinner sp_a = FindViewById<Spinner>(Resource.Id.spinner1);
             Spinner sp_b = FindViewById<Spinner>(Resource.Id.spinner2);
             Spinner sp_c = FindViewById<Spinner>(Resource.Id.spinner3);
-            sp_a.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+
+            //sp_a.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
             var adapter = ArrayAdapter.CreateFromResource(
                     this, Resource.Array.numbers_array, Android.Resource.Layout.SimpleSpinnerItem);
 
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             sp_a.Adapter = adapter;
 
-            sp_b.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            //sp_b.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
            // var adapter = ArrayAdapter.CreateFromResource(
                    // this, Resource.Array.numbers_array, Android.Resource.Layout.SimpleSpinnerItem);
 
             adapter.SetDropDownViewResource(Android.Resource.Layout.SimpleSpinnerDropDownItem);
             sp_b.Adapter = adapter;
 
-            sp_c.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
+            //sp_c.ItemSelected += new EventHandler<AdapterView.ItemSelectedEventArgs>(spinner_ItemSelected);
            //var adapter = ArrayAdapter.CreateFromResource(
             //        this, Resource.Array.numbers_array, Android.Resource.Layout.SimpleSpinnerItem);
             
@@ -58,18 +61,18 @@ namespace Equations_calculator
             {
                 double aArg, bArg, cArg;
 
-                var a = (Double.TryParse(sp_a.ItemSelected, out aArg));
-                var b = (Double.TryParse(sp_b.ItemSelected, out bArg));
-                var c = (Double.TryParse(sp_c.ItemSelected, out cArg));
+                var a = (Double.TryParse(sp_a.SelectedItem.ToString(), out aArg));
+                var b = (Double.TryParse(sp_b.SelectedItem.ToString(), out bArg));
+                var c = (Double.TryParse(sp_c.SelectedItem.ToString(), out cArg));
 
                 button.Text = Diskriminant(aArg, bArg, cArg);
             };
         }
 
-        private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
-        {
-            Spinner spinner = (Spinner)sender;
-        }
+        //private void spinner_ItemSelected(object sender, AdapterView.ItemSelectedEventArgs e)
+        //{
+        //    Spinner spinner = (Spinner)sender;
+        //}
 
         public string Diskriminant(double a, double b, double c)
         {
