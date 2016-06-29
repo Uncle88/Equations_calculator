@@ -8,8 +8,8 @@
         android:layout_width="match_parent"
         android:layout_height="103.0dp"
         android:id="@+id/textView1"
-        android:layout_marginBottom="20dp"
-        android:layout_marginTop="20dp"
+        android:layout_marginBottom="15dp"
+        android:layout_marginTop="15dp"
         android:text="The solution of the quadratic equation of the form ах2+bх+с=0 "
         android:gravity="center_horizontal"
         android:background="@android:color/holo_blue_light"
@@ -22,12 +22,13 @@
         android:layout_height="wrap_content"
         android:id="@+id/textView2"
         android:background="@android:color/darker_gray"
-        android:textColor="@android:color/black" />
+        android:textColor="@android:color/black"
+        android:layout_marginBottom="15dp" />
     <GridLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:rowCount="6"
-        android:columnCount="2"
+        android:columnCount="6"
         android:orientation="vertical">
         <TextView
             android:text="a="
@@ -35,22 +36,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/aArg"
             android:layout_row="0"
-            android:layout_column="0" />
-    <!-- <EditText
-        android:id="@+id/editText2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:textColor="@android:color/background_dark"
-         />-->
-        <Spinner
+            android:layout_column="0"
+            android:layout_marginLeft="15dp"/>
+           <Spinner
             android:id="@+id/spinner1"
-            android:layout_width="fill_parent"
+            android:layout_width="50dip"
             android:layout_height="50dip"
             android:prompt="@string/members_prompt"
-            android:background="#33DDFF"
+            android:background="#FF33D4"
             android:layout_row="0"
-            android:layout_column="1"
-            />
+            android:layout_column="1" />
         <Space
             android:layout_row="1"
             android:layout_column="0"
@@ -61,23 +56,17 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/bArg"
             android:layout_row="2"
-            android:layout_column="0" />
-        <!--<EditText
-            android:id="@+id/editText3"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
-            android:textColor="@android:color/black"
-           />-->
-      <Spinner
-           android:id="@+id/spinner2"
-           android:layout_width="fill_parent"
-           android:layout_height="50dip"
-           android:prompt="@string/members_prompt"
-           android:background="#33DDFF"
+            android:layout_column="2"
+            android:layout_marginLeft="25dp"/>
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:prompt="@string/members_prompt"
+            android:background="#FF33D4"
             android:layout_row="2"
-            android:layout_column="1" 
-                      />
+            android:layout_column="3"
+            android:layout_marginRight="25dp"/>
         <Space
             android:layout_row="3"
             android:layout_column="0"
@@ -88,23 +77,16 @@
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:id="@+id/cArg"
             android:layout_row="4"
-            android:layout_column="0" />
-   <!--    <EditText
-            android:id="@+id/editText4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@android:color/background_light"
-            android:textColor="@android:color/black"
-           />--> 
-      <Spinner
-           android:id="@+id/spinner3"
-           android:layout_width="fill_parent"
-           android:layout_height="50dip"
-           android:prompt="@string/members_prompt"
-           android:background="#33DDFF" 
+            android:layout_column="4" 
+            />
+        <Spinner
+            android:id="@+id/spinner3"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:prompt="@string/members_prompt"
+            android:background="#FF33D4"
             android:layout_row="4"
-            android:layout_column="1" 
-           />
+            android:layout_column="5" />
         <Space
             android:layout_row="5"
             android:layout_column="0"
