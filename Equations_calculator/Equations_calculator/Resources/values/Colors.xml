@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<resources>
+  <color name="background_color_textView1">#33E6FF</color>
+  <color name="text_color">#01010E</color>
+
+  <color name="background_color_textView2">#A4A0B0</color>
+  
+  <color name="background_color_spinner">#47F007</color>
+
+  <color name="background_color_button">#FF0C05</color>
+  
+</resources>
