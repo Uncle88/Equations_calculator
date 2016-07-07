@@ -50,13 +50,15 @@ namespace Equations_calculator
                 var b = (Double.TryParse(sp_b.SelectedItem.ToString(), out bArg));
                 var c = (Double.TryParse(sp_c.SelectedItem.ToString(), out cArg));
 
-                button.Text = Diskriminant(aArg, bArg, cArg);
+                string toast = string.Format(" {0} ", Diskriminant(aArg, bArg, cArg));
+                Toast.MakeText(this, toast, ToastLength.Long).Show();
+                // button.Text = Diskriminant( aArg, bArg, cArg);
             };
         }
 
-        public string Diskriminant(double a, double b, double c)
+        public string Diskriminant(double aArg, double bArg, double cArg)
         {
-            var tmpResult = b * b - 4 * a * c;
+            var tmpResult = bArg * bArg - 4 * aArg * cArg;
             if (tmpResult > 0)
             {
                 return "D>0 - The equation has two radicals";
