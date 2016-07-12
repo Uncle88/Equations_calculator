@@ -40,6 +40,7 @@ namespace Equations_calculator
 
             button.Click += delegate
             {
+               
                 double aArg, bArg, cArg;
 
                 var a = (Double.TryParse(sp_a.SelectedItem.ToString(), out aArg));
