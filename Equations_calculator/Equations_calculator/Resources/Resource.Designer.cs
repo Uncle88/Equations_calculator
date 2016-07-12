@@ -120,7 +120,10 @@ namespace Equations_calculator
 			public const int container = 2131165185;
 			
 			// aapt resource value: 0x7f07000b
-			public const int menu_item_share_action_provider_action_bar = 2131165195;
+			public const int demoImageView = 2131165195;
+			
+			// aapt resource value: 0x7f07000c
+			public const int menu_item_share_action_provider_action_bar = 2131165196;
 			
 			// aapt resource value: 0x7f070000
 			public const int scroll = 2131165184;

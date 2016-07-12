@@ -13,14 +13,18 @@ namespace Equations_calculator
     [Activity(Label = "Equations_calculator", MainLauncher = true, Icon = "@drawable/icon")]
     public class MainActivity : Activity
     {
+       
         protected override void OnCreate(Bundle bundle)
         {
+
             base.OnCreate(bundle);
             SetContentView(Resource.Layout.Main);
 
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            
+            var imageView =
+             FindViewById<ImageView>(Resource.Id.demoImageView);
+            imageView.SetImageResource(Resource.Drawable.Icon);
 
             Spinner sp_a = FindViewById<Spinner>(Resource.Id.spinner1);
             Spinner sp_b = FindViewById<Spinner>(Resource.Id.spinner2);
