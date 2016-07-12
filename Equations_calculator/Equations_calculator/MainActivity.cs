@@ -6,6 +6,7 @@ using Android.Views;
 using Android.Widget;
 using Android.OS;
 using static Android.App.ActionBar;
+using Android;
 
 namespace Equations_calculator
 {
@@ -19,12 +20,7 @@ namespace Equations_calculator
 
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
-            Tab tab = ActionBar.NewTab();
-            tab.SetIcon(Resource.Drawable.Icon);
-            tab.TabSelected += (sender, args) =>
-            { };
-                ActionBar.AddTab(tab);
+            
 
             Spinner sp_a = FindViewById<Spinner>(Resource.Id.spinner1);
             Spinner sp_b = FindViewById<Spinner>(Resource.Id.spinner2);
@@ -50,31 +46,20 @@ namespace Equations_calculator
                 var b = (Double.TryParse(sp_b.SelectedItem.ToString(), out bArg));
                 var c = (Double.TryParse(sp_c.SelectedItem.ToString(), out cArg));
 
-                string toast = string.Format(" {0} ", Diskriminant(aArg, bArg, cArg));
+               string toast = string.Format(" {0} ", Diskriminant. MyDiskriminant( aArg, bArg, cArg));
                 Toast.MakeText(this, toast, ToastLength.Long).Show();
+                //toast.ToString(Gravity.ApplyDisplay, 0, 0);
                 // button.Text = Diskriminant( aArg, bArg, cArg);
             };
-        }
 
-        public string Diskriminant(double aArg, double bArg, double cArg)
-        {
-            var tmpResult = bArg * bArg - 4 * aArg * cArg;
-            if (tmpResult > 0)
-            {
-                return "D>0 - The equation has two radicals";
-            }
-            else if (tmpResult == 0)
-            {
-                return "D=0 - The equation has two equal radicals";
-            }
-            else if (tmpResult < 0)
-            {
-                return "D<0 - The equation hasn't real radicals";
-            }
-            else
-            {
-                throw new Exception("Unknown Diskriminant value");
-            }
+            //ActionBar.NavigationMode = ActionBarNavigationMode.Tabs;
+            //Tab tab = ActionBar.NewTab();
+            //tab.SetIcon(Resource.Drawable.Icon);
+            //tab.TabSelected += (sender, args) =>
+            //{
+        
+            //};
+            //ActionBar.AddTab(tab);
         }
     }
 }
