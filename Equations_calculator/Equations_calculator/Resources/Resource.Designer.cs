@@ -60,20 +60,23 @@ namespace Equations_calculator
 		public partial class Color
 		{
 			
-			// aapt resource value: 0x7f040004
-			public const int background_color_button = 2130968580;
+			// aapt resource value: 0x7f040005
+			public const int background_color_button = 2130968581;
 			
-			// aapt resource value: 0x7f040003
-			public const int background_color_spinner = 2130968579;
+			// aapt resource value: 0x7f040004
+			public const int background_color_spinner = 2130968580;
 			
 			// aapt resource value: 0x7f040000
 			public const int background_color_textView1 = 2130968576;
 			
-			// aapt resource value: 0x7f040002
-			public const int background_color_textView2 = 2130968578;
+			// aapt resource value: 0x7f040003
+			public const int background_color_textView2 = 2130968579;
 			
 			// aapt resource value: 0x7f040001
 			public const int text_color = 2130968577;
+			
+			// aapt resource value: 0x7f040002
+			public const int text_color2 = 2130968578;
 			
 			static Color()
 			{
@@ -90,6 +93,9 @@ namespace Equations_calculator
 			
 			// aapt resource value: 0x7f020000
 			public const int Icon = 2130837504;
+			
+			// aapt resource value: 0x7f020001
+			public const int icon2 = 2130837505;
 			
 			static Drawable()
 			{
@@ -120,10 +126,7 @@ namespace Equations_calculator
 			public const int container = 2131165185;
 			
 			// aapt resource value: 0x7f07000b
-			public const int demoImageView = 2131165195;
-			
-			// aapt resource value: 0x7f07000c
-			public const int menu_item_share_action_provider_action_bar = 2131165196;
+			public const int menu_item_share_action_provider_action_bar = 2131165195;
 			
 			// aapt resource value: 0x7f070000
 			public const int scroll = 2131165184;

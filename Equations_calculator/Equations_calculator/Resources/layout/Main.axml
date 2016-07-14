@@ -8,7 +8,8 @@
         android:id="@+id/container"
         android:orientation="vertical"
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent">
+        android:layout_height="fill_parent"
+        android:background="@drawable/icon2">
         <TextView
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:layout_width="match_parent"
@@ -35,11 +36,10 @@
             android:layout_height="wrap_content"
             android:rowCount="6"
             android:columnCount="6"
-            android:orientation="vertical" >
-           
+            android:orientation="vertical">
             <TextView
                 android:text="a="
-                android:textColor="#101010"
+                android:textColor="@color/text_color2"
                 android:textSize="25dip"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/aArg"
@@ -60,7 +60,7 @@
                 android:layout_height="10dp" />
             <TextView
                 android:text="b="
-                android:textColor="#101010"
+                android:textColor="@color/text_color2"
                 android:textSize="25dip"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/bArg"
@@ -82,7 +82,7 @@
                 android:layout_height="10dp" />
             <TextView
                 android:text="c="
-                android:textColor="#101010"
+                android:textColor="@color/text_color2"
                 android:textSize="25dip"
                 android:textAppearance="?android:attr/textAppearanceLarge"
                 android:id="@+id/cArg"
@@ -102,16 +102,16 @@
                 android:layout_height="10dp" />
         </GridLayout>
         <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
             android:id="@+id/MyButton"
             android:text="discriminant count"
             android:background="@color/background_color_button"
-            android:textColor="@color/text_color" />
-      <ImageView
-       android:layout_width="match_parent"
-       android:layout_height="wrap_content"
-       android:id="@+id/demoImageView"
-       android:src="@drawable/Icon"/>
+            android:textColor="@color/text_color"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+       <!-- <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/demoImageView"
+            android:background="@drawable/flag" />-->
     </LinearLayout>
 </ScrollView>

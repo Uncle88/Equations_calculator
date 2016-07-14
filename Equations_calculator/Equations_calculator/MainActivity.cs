@@ -10,7 +10,7 @@ using Android;
 
 namespace Equations_calculator
 {
-    [Activity(Label = "Equations_calculator", MainLauncher = true, Icon = "@drawable/icon")]
+    [Activity(Label = "Equations_calculator", MainLauncher = true, Icon = "@drawable/icon2")]
     public class MainActivity : Activity
     {
        
@@ -22,9 +22,9 @@ namespace Equations_calculator
 
             Button button = FindViewById<Button>(Resource.Id.MyButton);
 
-            var imageView =
-             FindViewById<ImageView>(Resource.Id.demoImageView);
-            imageView.SetImageResource(Resource.Drawable.Icon);
+            //var imageView =
+            // FindViewById<ImageView>(Resource.Id.demoImageView);
+            //imageView.SetImageResource(Resource.Drawable.flag);
 
             Spinner sp_a = FindViewById<Spinner>(Resource.Id.spinner1);
             Spinner sp_b = FindViewById<Spinner>(Resource.Id.spinner2);
